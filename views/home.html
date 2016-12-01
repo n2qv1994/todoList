@@ -1,0 +1,72 @@
+<div id="header">
+	<div class="row text-center">
+		<h1>My To Do List</h1>
+	</div>
+	<div class="row">
+		<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Tille..." id="textbox-task">
+				<span class="input-group-btn">
+		        	<button class="btn btn-primary" type="button" id="button-add-task">Add</button>
+		      	</span>			      	
+		    </div>
+		</div>
+	</div>	
+</div> <!-- End header -->
+
+
+<div id="body">
+	<div class="row">
+		<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
+			<div class="list-group button-group" id="list-tasks">
+				{{#each tasks}}
+					<a href='#' class='list-group-item'>
+						{{#if status.checked}}
+							<input type='checkbox' class='checkbox-done-task' checked>
+							<span class="done">{{description}}</span>
+						{{else}}
+							<input type='checkbox' class='checkbox-done-task'>
+							<span>{{description}}</span>
+						{{/if}}					
+						<label class='hidden'>{{_id}}</label>
+						<button class='pull-right btn-default btn-delete-task-item'>X</button>
+					</a>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 text-center">
+			<button class="btn btn-warning" id="button-delete-tasks-checked">Delete</button>
+		</div>
+	</div> <!-- End list task -->
+	<hr>
+	<hr>
+	<div>
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
+				<h2 class="text-center">Task History</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 text-center">
+				<button id="button-get-history" class="btn btn-primary">Get All History</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
+				<ul class="list-group" id="history">
+					
+				</ul>
+			</div>
+		</div>			
+	</div> <!--  End history -->
+</div> <!-- End body -->
+
+<div id="footer">
+		
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/customevent.js"></script>

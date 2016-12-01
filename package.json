@@ -1,0 +1,34 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "just example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giapvn/todoList.git"
+  },
+  "author": "TGV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giapvn/todoList/issues"
+  },
+  "homepage": "https://github.com/giapvn/todoList#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "errorhandler": "^1.4.3",
+    "express": "^4.14.0",
+    "express3-handlebars": "^0.5.2",
+    "method-override": "^2.3.6",
+    "mongodb": "^2.2.4",
+    "mongoose": "^4.5.4",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  }
+}

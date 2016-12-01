@@ -1,0 +1,15 @@
+#header{
+    margin-bottom: 50px;
+}
+
+#body input{
+    margin-right: 20px;
+}
+
+.done{
+	text-decoration: line-through;
+}
+
+.hidden{
+	display: none;
+}
